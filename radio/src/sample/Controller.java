@@ -16,6 +16,7 @@ public class Controller {
     private Button button;
     @FXML
     private Slider slider;
+    public static float gain;
     @FXML
     private void handlePlayButton(ActionEvent event){
         System.out.println("clicked play button");
@@ -30,27 +31,17 @@ public class Controller {
         }
     }
     public void initialize() {
-
-        //slider.valueProperty().addListener((observable, oldValue, newValue) -> {
-
-            //setGain((float) slider.getValue());
         System.out.println(slider.getValue());
-
-
-        //});
         slider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 if (play == true) {
                     System.out.println(slider.getValue());
                     setGain((float) slider.getValue());
+                    gain = (float) slider.getValue();
                 }
             }
         });
-
-    }
-    @FXML
-    private void handleStopButton(ActionEvent event){
 
     }
 }

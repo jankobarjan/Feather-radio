@@ -4,7 +4,9 @@ import javax.sound.sampled.*;
 import java.io.IOException;
 import java.net.URL;
 
+import static sample.RadioController.getGain;
 import static sample.RadioController.radioRun;
+import static sample.RadioController.setGain;
 
 public class Radio implements Runnable{
     private Thread t;
@@ -25,6 +27,7 @@ public class Radio implements Runnable{
             if(line != null){
                 line.open();
                 line.start();
+                setGain(getGain());
                 int nBytesRead = 0;
                 while (nBytesRead != -1 && shutdown != true) {
                     nBytesRead = dataIn.read(buffer, 0, buffer.length);

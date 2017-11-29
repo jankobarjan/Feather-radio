@@ -1,3 +1,14 @@
 #background {
-    -fx-background-image: url("34.png");
+    /*-fx-background-image: url("34.png");*/
+    -fx-background-color: #5E4C7F;
+}
+#buttonStart {
+    -fx-background-color: #BC98FF;
+    -fx-text-fill: #5E4C7F;
+}
+.label {
+    -fx-text-fill: #EEE5FF;
+}
+.slider {
+    -fx-text-fill: #EEE5FF;
 }

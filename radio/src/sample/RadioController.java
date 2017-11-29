@@ -9,10 +9,15 @@ public class RadioController {
         radio.start();
     }
     public static void radioStop(){
-        radio.shutdown = true;
+        if(radio != null) {
+            radio.shutdown = true;
+        }
     }
     public static void setGain(float gain){
         FloatControl gainControl = (FloatControl) radio.line.getControl(FloatControl.Type.MASTER_GAIN);
         gainControl.setValue(gain);
+    }
+    public static float getGain(){
+        return Controller.gain;
     }
 }
