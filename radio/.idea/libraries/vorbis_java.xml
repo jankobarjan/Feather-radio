@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="vorbis java">
+    <CLASSES>
+      <root url="file://C:/vorbis java" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://C:/vorbis java" recursive="false" />
+  </library>
+</component>
