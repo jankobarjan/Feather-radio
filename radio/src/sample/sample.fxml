@@ -13,5 +13,6 @@
        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="194.0" layoutY="350.0" prefHeight="17.0" prefWidth="32.0" text="Label" />
       <Label layoutX="113.0" layoutY="76.0" text="Feather Radio" />
+      <Label fx:id="titleLabel" layoutX="113.0" layoutY="262.0" text="" />
    </children>
 </AnchorPane>

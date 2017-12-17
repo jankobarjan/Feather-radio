@@ -5,17 +5,20 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 
 import static sample.RadioController.*;
 
-public class Controller {
+public class Controller{
 
     boolean play = false;
     @FXML
     private Button button;
     @FXML
     private Slider slider;
+    @FXML
+    private Label titleLabel;
     public static float gain;
     @FXML
     private void handlePlayButton(ActionEvent event){
@@ -44,4 +47,8 @@ public class Controller {
         });
 
     }
+    void changeTitle(String title){
+        titleLabel.setText(title);
+    }
+
 }
