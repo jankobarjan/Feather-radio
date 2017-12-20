@@ -13,7 +13,7 @@ import static sample.RadioController.radioStop;
 public class Main extends Application {
     static FXMLLoader loader;
     public Scene scene;
-    static MetadataGetter metadataGetter = new MetadataGetter();
+    private static MetadataGetter metadataGetter = new MetadataGetter();
     @Override
     public void start(Stage primaryStage) throws Exception{
         loader = new FXMLLoader(getClass().getResource("sample.fxml"));
@@ -33,6 +33,6 @@ public class Main extends Application {
     public static void changeTitle(){
         Controller controller = loader.getController();
         Platform.runLater(() -> controller.changeTitle(metadataGetter.getTitle()));
-
+        System.out.println(metadataGetter.getTitle());
     }
 }

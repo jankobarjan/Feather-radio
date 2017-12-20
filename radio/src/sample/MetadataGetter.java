@@ -25,6 +25,7 @@ public class MetadataGetter {
             JsonArray jarray = jobject.getAsJsonArray("source");
             jobject = jarray.get(0).getAsJsonObject();
             result = jobject.get("title").toString();
+            System.out.println(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
